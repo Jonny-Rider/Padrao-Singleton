@@ -4,25 +4,6 @@ O padrão Singleton é uma solução de design em que um aplicativo deseja ter u
 
 O termo singleton é derivado de sua contraparte matemática. Ele quer que, como dito acima, tenhamos apenas uma instância por contexto. Em Java, uma instância por JVM.
 
-Modelo de código abaixo projetando sua classe singleton que deve garantir apenas uma instância de uma classe em todo o aplicativo em todos os cenários.
+Projetando sua classe singleton, deve garantir apenas uma instância de uma classe em todo o aplicativo em todos os cenários.
 
-    public class DemoSingleton implements Serializable {
-
-    private static final long serialVersionUID = 1L;
- 
-    private DemoSingleton() {
-        // private constructor
-    }
- 
-    private static class DemoSingletonHolder {
-        public static final DemoSingleton INSTANCE = new DemoSingleton();
-    }
- 
-    public static DemoSingleton getInstance() {
-        return DemoSingletonHolder.INSTANCE;
-    }
- 
-    protected Object readResolve() {
-        return getInstance();
-    }
-}
+No arquivo deste repositório, tem o código de exemplo implementando o padrão em JAVA.
